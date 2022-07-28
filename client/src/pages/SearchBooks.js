@@ -78,9 +78,8 @@ const SearchBooks = () => {
 
 		try {
 			const { data } = await saveBook({
-				variables: { book: { bookToSave } },
+				variables: { book: bookToSave },
 			});
-
 			// if book successfully saves to user's account, save book id to state
 			setSavedBookIds([...savedBookIds, bookToSave.bookId]);
 		} catch (err) {
